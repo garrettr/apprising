@@ -43,9 +43,12 @@ USE_I18N = True
 # calendars according to the current locale
 USE_L10N = True
 
+# context-free paths for MEDIA_ROOT and TEMPLATE_DIRS
+import os.path
+
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = os.path.join(os.path.dirname(__file__), 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
@@ -79,12 +82,18 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'apprising.urls'
 
+
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/Users/grobin/Documents/Django-Projects/apprising/templates/',
+    #'/Users/grobin/Documents/Django-Projects/apprising/templates/',
+    # Use this little bit of code, rather than hardcoding the absolute path
+    os.path.join(os.path.dirname(__file__), 'templates'),
 )
+
+# django-tinymce settings go in here
+# leaving all to defaults for now
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -98,4 +107,6 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     # Adding flatpages
     'django.contrib.flatpages',
+    # django-tinymce
+    'tinymce',
 )
