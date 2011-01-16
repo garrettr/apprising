@@ -2,15 +2,24 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
     <head>
+        <link rel="stylesheet" type="text/css" href="../static/css/base.css" />
         <title>
-            Appalachia Rising {% block title %}{% endblock %}
+            {% block title %}Home |{% endblock %} Appalachia Rising
         </title>
     </head>
 
 
     <body>
         <div id="header">
-            <h1>BASE HEADER</h1>
+            <h1>Appalachia Rising</h1>
+        </div>
+        <div id="navbar">
+            <ul>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/organize/">Organize</a></li>
+                <li><a href="/support/">Support</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
         </div>
         <div id="content">
             {% block content %}
