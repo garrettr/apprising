@@ -60,6 +60,9 @@ MEDIA_URL = ''
 # Examples: "http://foo.com/media/", "/media/".
 ADMIN_MEDIA_PREFIX = '/media/'
 
+# Static Document root - for serving static files on the dev server
+STATIC_FILE_ROOT = os.path.join(os.path.dirname(__file__), 'static')
+
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '$$4)%#mq96u7k*k(20k7*9k0&k^ku!epko%z(#^-i=it5x$%+o'
 
