@@ -15,5 +15,5 @@ urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
 
     # django-tinymce
-    (r'^tinymce/', include('tinymce.urls')),
+    # (r'^tinymce/', include('tinymce.urls')),
 )

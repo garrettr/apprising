@@ -108,5 +108,5 @@ INSTALLED_APPS = (
     # Adding flatpages
     'django.contrib.flatpages',
     # django-tinymce
-    'tinymce',
+    #'tinymce',
 )
