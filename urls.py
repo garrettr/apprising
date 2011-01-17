@@ -5,6 +5,7 @@ from django.conf import settings
 from django.contrib import admin
 admin.autodiscover()
 
+
 urlpatterns = patterns('',
     # Example:
     # (r'^apprising/', include('apprising.foo.urls')),
@@ -17,10 +18,16 @@ urlpatterns = patterns('',
 
     # django-tinymce
     # (r'^tinymce/', include('tinymce.urls')),
+
+    # this breaks css - why?
+    #(r'', include('django.contrib.flatpages.urls')),
 )
 
 if settings.DEBUG:
     urlpatterns += patterns('',
         (r'^static/(?P<path>.*)$', 'django.views.static.serve', \
 		{'document_root': settings.STATIC_FILE_ROOT}),
+	# tinymce setup from "Practical Django Projects", Ch. 3
+	(r'^tiny_mce/(?P<path>.*)$', 'django.views.static.serve', \
+		{'document_root': settings.STATIC_FILE_ROOT + "/js/tiny_mce"}),
     )
