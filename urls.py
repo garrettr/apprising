@@ -24,7 +24,8 @@ urlpatterns = patterns('',
     #(r'', include('django.contrib.flatpages.urls')),
 
     # wynton - blog app
-    (r'^blog/', include('wynton.urls')),
+    (r'^blog/categories/', include('wynton.urls.categories')),
+    (r'^blog/', include('wynton.urls.entries')),
 )
 
 if settings.DEBUG:
