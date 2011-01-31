@@ -26,8 +26,8 @@ urlpatterns = patterns('',
 if settings.DEBUG:
     urlpatterns += patterns('',
         (r'^static/(?P<path>.*)$', 'django.views.static.serve', \
-		{'document_root': settings.STATIC_FILE_ROOT}),
-	# tinymce setup from "Practical Django Projects", Ch. 3
-	(r'^tiny_mce/(?P<path>.*)$', 'django.views.static.serve', \
-		{'document_root': settings.STATIC_FILE_ROOT + "/js/tiny_mce"}),
+        {'document_root': settings.STATIC_FILE_ROOT}),
+    # tinymce setup from "Practical Django Projects", Ch. 3
+    (r'^tiny_mce/(?P<path>.*)$', 'django.views.static.serve', \
+        {'document_root': settings.STATIC_FILE_ROOT + "/js/tiny_mce"}),
     )
