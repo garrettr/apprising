@@ -1,1 +1,8 @@
 {% extends "wynton/base_categories.html" %}
+
+{% block title %}{{ block.super }} | {{ object.title }} {% endblock %}
+
+{% block content %}
+<h2>{{ object.title }}</h2>
+{{ object.description|safe }}
+{% endblock %}

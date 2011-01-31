@@ -1,1 +1,21 @@
 {% extends "wynton/base_categories.html" %}
+
+{% block title %}{{ block.super }} | Categories{% endblock %}
+
+{% block content %}
+<h2>Categories</h2>
+	{% if object_list %}
+		{% for category in object_list %}
+			<h2><a href="{{ category.get_absolute_url }}">
+				{{ category.title }}
+			</a></h2>
+			<p>{{ category.description }}</h2>
+		{% endfor %}
+	{% else %}
+		<p>There are no categories defined</p>
+	{% endif %}
+{% endblock %}
+
+{% block whatis %}
+<p>This is a list of the categories for this blog</p>
+{% endblock %} 
