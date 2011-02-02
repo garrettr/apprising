@@ -1,5 +1,5 @@
 # Ignore database files during dev
-*.db
+# *.db
 
 # Ignore all Vim swap files
 *.swp
