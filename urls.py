@@ -31,3 +31,10 @@ if settings.DEBUG:
     (r'^tiny_mce/(?P<path>.*)$', 'django.views.static.serve', \
         {'document_root': settings.STATIC_FILE_ROOT + "/js/tiny_mce"}),
     )
+
+# wes handles content like flatpages
+# i.e. wildcards all get sent to wes to handle
+# this has to go below everything else, or it breaks things
+urlpatterns += patterns('',
+        (r'', include('wes.urls')),
+)
