@@ -112,4 +112,5 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     # django-tinymce
     #'tinymce',
+    'wes',
 )
