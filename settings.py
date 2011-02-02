@@ -112,4 +112,5 @@ INSTALLED_APPS = (
     # django-tinymce
     #'tinymce',
     'wes',
+	'wynton',
 )

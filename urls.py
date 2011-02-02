@@ -20,7 +20,12 @@ urlpatterns = patterns('',
     # (r'^tinymce/', include('tinymce.urls')),
 
     # this breaks css - why?
+    # overrides the later stuff - can fix this if i want, but immaterial now
     #(r'', include('django.contrib.flatpages.urls')),
+
+    # wynton - blog app
+    (r'^blog/categories/', include('wynton.urls.categories')),
+    (r'^blog/', include('wynton.urls.entries')),
 )
 
 if settings.DEBUG:
