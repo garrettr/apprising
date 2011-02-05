@@ -17,11 +17,7 @@ urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
 
     # django-tinymce
-    # (r'^tinymce/', include('tinymce.urls')),
-
-    # this breaks css - why?
-    # overrides the later stuff - can fix this if i want, but immaterial now
-    #(r'', include('django.contrib.flatpages.urls')),
+    (r'^tinymce/', include('tinymce.urls')),
 
     # wynton - blog app
     (r'^blog/categories/', include('wynton.urls.categories')),
@@ -33,8 +29,8 @@ if settings.DEBUG:
         (r'^static/(?P<path>.*)$', 'django.views.static.serve', \
         {'document_root': settings.STATIC_FILE_ROOT}),
     # tinymce setup from "Practical Django Projects", Ch. 3
-    (r'^tiny_mce/(?P<path>.*)$', 'django.views.static.serve', \
-        {'document_root': settings.STATIC_FILE_ROOT + "/js/tiny_mce"}),
+    #(r'^tiny_mce/(?P<path>.*)$', 'django.views.static.serve', \
+    #    {'document_root': settings.STATIC_FILE_ROOT + "/js/tiny_mce"}),
     )
 
 # wes handles content like flatpages

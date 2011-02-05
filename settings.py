@@ -53,12 +53,12 @@ MEDIA_ROOT = os.path.join(os.path.dirname(__file__), 'media')
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = ''
+MEDIA_URL = '/static/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/media/'
+ADMIN_MEDIA_PREFIX = '/admin/static'
 
 # Static Document root - for serving static files on the dev server
 STATIC_FILE_ROOT = os.path.join(os.path.dirname(__file__), 'static')
@@ -95,8 +95,8 @@ TEMPLATE_DIRS = (
     os.path.join(os.path.dirname(__file__), 'templates'),
 )
 
-# django-tinymce settings go in here
-# leaving all to defaults for now
+# django-tinymce settings
+TINYMCE_JS_ROOT = STATIC_FILE_ROOT + "/js/tiny_mce"
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -109,8 +109,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     #'django.contrib.flatpages',
-    # django-tinymce
-    #'tinymce',
+    'tinymce',
     'wes',
 	'wynton',
 )
