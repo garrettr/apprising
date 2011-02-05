@@ -15,11 +15,11 @@
         </div>
         <div id="navbar">
             <ul>
-                <li><a href="/about/">About</a></li>
-                <li><a href="/faq/">F.A.Q</a></li>
-                <li><a href="/organize/">Organize</a></li>
-                <li><a href="/support/">Support</a></li>
-                <li><a href="/contact/">Contact</a></li>
+                {% load wes_tags %}
+                {% get_nav_list %}
+                {% for item in nav_list %}
+                <li><a href="{{ item.get_absolute_url }}">{{ item.title }}</a></li>
+                {% endfor %}
             </ul>
         </div>
         <div id="content">
