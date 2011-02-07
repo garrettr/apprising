@@ -22,6 +22,8 @@ urlpatterns = patterns('',
     # wynton - blog app
     #(r'^blog/categories/', include('wynton.urls.categories')),
     #(r'^blog/', include('wynton.urls.entries')),
+    url(r'^weblog/', include('zinnia.urls')),
+    url(r'^comments/', include('django.contrib.comments.urls'))
 )
 
 if settings.DEBUG:
