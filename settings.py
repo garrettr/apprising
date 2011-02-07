@@ -111,5 +111,5 @@ INSTALLED_APPS = (
     #'django.contrib.flatpages',
     'tinymce',
     'wes',
-	'wynton',
+	#'wynton',
 )

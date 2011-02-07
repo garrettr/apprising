@@ -20,8 +20,8 @@ urlpatterns = patterns('',
     (r'^tinymce/', include('tinymce.urls')),
 
     # wynton - blog app
-    (r'^blog/categories/', include('wynton.urls.categories')),
-    (r'^blog/', include('wynton.urls.entries')),
+    #(r'^blog/categories/', include('wynton.urls.categories')),
+    #(r'^blog/', include('wynton.urls.entries')),
 )
 
 if settings.DEBUG:
