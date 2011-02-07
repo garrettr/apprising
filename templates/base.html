@@ -10,22 +10,34 @@
 
 
     <body>
-        <div id="header">
-            <h1>Appalachia Rising</h1>
-        </div>
+    <div id="container">
         <div id="navbar">
             <ul>
                 {% load wes_tags %}
                 {% get_nav_list %}
                 {% for item in nav_list %}
-                <li><a href="{{ item.get_absolute_url }}">{{ item.title }}</a></li>
+                <li>
+                    <a href="{{ item.get_absolute_url }}">{{ item.title }}</a>
+                    {% if item.sub_pages.all %}
+                        <ul id="submenu">
+                        {% for subpage in item.sub_pages.all %}
+                        <li><a href="{{ subpage.get_absolute_url }}">{{ subpage.title }}</a></li>
+                        {% endfor %}
+                        </ul>
+                    {% endif %}
+                    
+                </li>
                 {% endfor %}
             </ul>
+        </div>
+        <div id="header">
+            <h1>Appalachia Rising</h1>
         </div>
         <div id="content">
             {% block content %}
             {% endblock %}
         </div>
         <div id="sidebar"></div>
+    </div>
     </body>
 </html>

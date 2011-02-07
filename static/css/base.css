@@ -1,15 +1,14 @@
-body
+#container
 {
     position:relative;
     margin:0 auto; /* centers */
+    padding:0;
     width: 800px;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
 }
 
 #content
 {
-    background-color: #EEEEEE;
-    border:1px solid gray;
-    padding:10px;
 }
 
 #navbar
@@ -21,17 +20,32 @@ body
 #navbar ul
 {
     list-style-type:none;
+    margin:0;
     padding:0;
 }
 
-#navbar li
+#navbar ul li
 {
-    float:left;
-    display:block;
-    width:90px;
+    display:inline;
+    /* padding: 1.5% 2.4%; */
+    margin:0 2.8%;
+    text-align:center;
+    text-transform:uppercase;
 }
 
 #navbar a
 {
 }
 
+#submenu
+{
+    display:block;
+    position:absolute;
+    z-index:1;
+    visibility:hidden;
+}
+
+#navbar a:hover #submenu ul
+{
+    visibility:visible;
+}
