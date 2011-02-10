@@ -1,5 +1,8 @@
 # Django settings for apprising project.
 
+# context-free paths
+import os.path
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -12,7 +15,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '/home/garrett/Documents/webdev/apprising/appalachia.db', # Or path to database file if using sqlite3.
+        'NAME': os.path.join(os.path.dirname(__file__), 'appalachia.db'), # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -43,8 +46,6 @@ USE_I18N = True
 # calendars according to the current locale
 USE_L10N = True
 
-# context-free paths for MEDIA_ROOT and TEMPLATE_DIRS
-import os.path
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
