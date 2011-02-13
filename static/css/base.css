@@ -93,10 +93,29 @@ body
     */
 }
 
-#header
+#header h1
 {
     /* for dev */
     /* border:1px solid black; */
+    color:#333;
+    text-align:right;
+    opacity:1.0;
+    font-size:4em;
+    position:relative;
+    top:0px;
+    right:20px;
+}
+
+#headerbar
+{
+    position:relative;
+    top:208px;
+    background-color:#CCC;
+    z-index:1;
+    /* for IE */
+  filter:alpha(opacity=60);
+  /* CSS3 standard */
+  opacity:0.6;
 }
 
 #content
@@ -112,6 +131,7 @@ body
     width:950px; /* Change this to your images width */
     height:200px; /* Change this to your images height */
     background:url(images/loading.gif) no-repeat 50% 50%;
+    z-index:0;
 }
 #slider img {
     position:absolute;
