@@ -45,11 +45,13 @@ body
 }
 
 
+
 #nav li
 {
     float:left;
     position:relative;
     width:100px;
+    padding: 1.2% 0%;
     /* display:inline;*/
     /*
     padding: 2.2% 2.4%;
@@ -61,7 +63,7 @@ body
 
 #nav li:hover
 {
-    background-color:#DCDCDC;
+    background-color:#E0E0E0;
 }
 
 #navsub
@@ -69,19 +71,23 @@ body
     visibility:hidden;
     position:absolute;
     z-index:1;
-    background-color:#DCDCDC;
+    background-color:#FFFFFF;
+    border: 1px solid #E0E0E0;
+    margin: 11% 0% 0%;
 }
 
 #navsub li
 {
     display:block;
-    left:-11px;
+    left:-22px;
     text-align:left;
+    padding: 4.2% 10.9%;
+
 }
 
 #navsub li:hover
 {
-    background-color:#BBB;
+    background-color:#EFEFEF;
 }
 
 #nav li:hover ul
@@ -93,23 +99,29 @@ body
     */
 }
 
+#header
+{
+    position:relative;
+}
+
 #header h1
 {
     /* for dev */
     /* border:1px solid black; */
     color:#333;
-    text-align:right;
+    text-align:left;
     opacity:1.0;
     font-size:4em;
     position:relative;
-    top:0px;
-    right:20px;
+    left:2px;
 }
 
 #headerbar
 {
-    position:relative;
-    top:208px;
+    width:950px;
+    height:61px;
+    position:absolute;
+    top:118px;
     background-color:#CCC;
     z-index:1;
     /* for IE */
@@ -120,11 +132,10 @@ body
 
 #content
 {
-    /* for dev */
-    /* border:1px solid black; */
+    min-height:427px; /* match facebook widget at the least */
 }
 
-/* default CSS for Nivo slider */
+/* CSS for Nivo slider */
 
 #slider {
     position:relative;
