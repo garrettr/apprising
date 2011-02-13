@@ -1,5 +1,9 @@
 # Ignore database files during dev
 # *.db
+# Ignore media files
+*.jpg
+*.png
+*.gif
 
 # Ignore all Vim swap files
 *.swp
