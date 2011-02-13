@@ -104,3 +104,22 @@ body
     /* for dev */
     /* border:1px solid black; */
 }
+
+/* default CSS for Nivo slider */
+
+#slider {
+    position:relative;
+    width:950px; /* Change this to your images width */
+    height:200px; /* Change this to your images height */
+    background:url(images/loading.gif) no-repeat 50% 50%;
+}
+#slider img {
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+#slider a {
+    border:0;
+    display:block;
+}
