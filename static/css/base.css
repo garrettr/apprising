@@ -1,51 +1,99 @@
 #container
 {
+    /*
     position:relative;
     margin:0 auto; /* centers */
+    /*
     padding:0;
-    width: 800px;
+    width: 80%;
     font-family: Verdana, Helvetica, Arial, sans-serif;
-}
-
-#content
-{
+    */
+    /* for dev */
+    /* border:1px solid black; */
 }
 
 #navbar
 {
-    height:30px;
-    margin:0 auto;
+    /* for dev */
+    /* border:1px solid black; */
 }
 
-#navbar ul
+#nav
 {
     list-style-type:none;
-    margin:0;
-    padding:0;
-}
-
-#navbar ul li
-{
-    display:inline;
-    /* padding: 1.5% 2.4%; */
-    margin:0 2.8%;
+    margin-top:1em;
     text-align:center;
-    text-transform:uppercase;
 }
 
-#navbar a
+#nav a
+{
+    /*display:block;*/
+    /*width:10em;*/
+    font-size:15px;
+    text-decoration:none;
+    color: black;
+}
+
+#nav a:hover
 {
 }
 
-#submenu
+
+#nav li
 {
-    display:block;
+    float:left;
+    position:relative;
+    width:100px;
+    /* display:inline;*/
+    /*
+    padding: 2.2% 2.4%;
+    text-align: center;
+    width:10em;
+    text-transform: uppercase;
+    */
+}
+
+#nav li:hover
+{
+    background-color:#DCDCDC;
+}
+
+#nav li ul
+{
+    visibility:hidden;
     position:absolute;
     z-index:1;
-    visibility:hidden;
+    background-color:#DCDCDC;
 }
 
-#navbar a:hover #submenu ul
+#nav li ul li
+{
+    display:block;
+    text-align:left;
+}
+
+#nav li ul li:hover
+{
+    background-color:#BBB;
+}
+
+#nav li:hover ul
 {
     visibility:visible;
+    /*
+    left:auto;
+    position: absolute;
+    */
+}
+
+#header
+{
+    /* for dev */
+    /* border:1px solid black; */
+}
+
+#content
+{
+    /* for dev */
+    /* border:1px solid black; */
 }

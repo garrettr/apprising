@@ -2,6 +2,9 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
     <head>
+        <link rel="stylesheet" href="/static/css/blueprint/screen.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="/static/css/blueprint/print.css" type="text/css" media="print">	
+        <!--[if lt IE 8]><link rel="stylesheet" href="/static/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
         <link rel="stylesheet" type="text/css" href="/static/css/base.css" />
         <title>
             {% block title %}Home |{% endblock %} Appalachia Rising
@@ -10,34 +13,34 @@
 
 
     <body>
-    <div id="container">
-        <div id="navbar">
-            <ul>
+    <div class="container">
+        <div class="span-24 last" id="navbar">
+            <ul id="nav">
                 {% load wes_tags %}
                 {% get_nav_list %}
                 {% for item in nav_list %}
                 <li>
-                    <a href="{{ item.get_absolute_url }}">{{ item.title }}</a>
+                <a href="{{ item.get_absolute_url }}">{{ item.title }}</a>
                     {% if item.sub_pages.all %}
-                        <ul id="submenu">
+                        <ul id="navsub">
                         {% for subpage in item.sub_pages.all %}
                         <li><a href="{{ subpage.get_absolute_url }}">{{ subpage.title }}</a></li>
                         {% endfor %}
                         </ul>
                     {% endif %}
-                    
                 </li>
                 {% endfor %}
             </ul>
         </div>
-        <div id="header">
+        <hr>
+        <div class="span-24 last" id="header">
             <h1>Appalachia Rising</h1>
         </div>
-        <div id="content">
+        <hr>
+        <div class="span-24" id="content">
             {% block content %}
             {% endblock %}
         </div>
-        <div id="sidebar"></div>
     </div>
     </body>
 </html>
