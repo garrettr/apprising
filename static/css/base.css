@@ -58,7 +58,7 @@
     background-color:#DCDCDC;
 }
 
-#nav li ul
+#navsub
 {
     visibility:hidden;
     position:absolute;
@@ -66,13 +66,13 @@
     background-color:#DCDCDC;
 }
 
-#nav li ul li
+#navsub li
 {
     display:block;
     text-align:left;
 }
 
-#nav li ul li:hover
+#navsub li:hover
 {
     background-color:#BBB;
 }
