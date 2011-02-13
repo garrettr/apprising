@@ -23,6 +23,7 @@
     list-style-type:none;
     margin-top:1em;
     text-align:center;
+    /* consider adding overflow:hidden */
 }
 
 #nav a
@@ -69,6 +70,7 @@
 #navsub li
 {
     display:block;
+    left:-11px;
     text-align:left;
 }
 
